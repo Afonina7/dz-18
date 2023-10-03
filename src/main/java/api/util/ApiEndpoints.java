@@ -1,4 +1,4 @@
-package api;
+package api.util;
 
 public class ApiEndpoints {
     public static final String BASE_URL = "https://restful-booker.herokuapp.com/";
@@ -6,5 +6,6 @@ public class ApiEndpoints {
     public static final String BOOKING_ENDPOINT = "booking/";
     public static final String PING_ENDPOINT = "ping/";
 
-    private ApiEndpoints() {}
+    private ApiEndpoints() {
+    }
 }

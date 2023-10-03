@@ -1,29 +1,33 @@
-package api;
+package api.payload;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import lombok.AllArgsConstructor;
 import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.EqualsAndHashCode;
+import lombok.Setter;
+import lombok.extern.jackson.Jacksonized;
 
-@Data
+@Jacksonized
 @Builder
-@NoArgsConstructor
-@AllArgsConstructor
+@Setter
+@EqualsAndHashCode
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class BookingRequestPayload {
-
     @JsonProperty("firstname")
-    public String firstName;
+    private String firstName;
+
     @JsonProperty("lastname")
-    public String lastName;
+    private String lastName;
+
     @JsonProperty("totalprice")
-    public int totalPrice;
+    private int totalPrice;
+
     @JsonProperty("depositpaid")
-    public boolean depositPaid;
+    private boolean depositPaid;
+
     @JsonProperty("bookingdates")
-    public BookingDates bookingDates;
+    private BookingDates bookingDates;
+
     @JsonProperty("additionalneeds")
-    public String additionalNeeds;
+    private String additionalNeeds;
 }
